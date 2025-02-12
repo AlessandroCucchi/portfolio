@@ -1,0 +1,338 @@
+@mixin transition-ease {
+  transition: all 0.5s ease-in-out;
+}
+
+
+@import 'header';
+@import 'footer';
+@import 'menu';
+
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-image: linear-gradient(270deg,
+  #242424, #292929);
+}
+
+.background{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+ 
+ 
+
+
+  .sezione-centrale{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 70%;
+    height: 100%;
+    background-color: white;
+    box-shadow: 10px 10px 4px 5px rgb(78, 78, 78);
+    margin: 100px auto 0;
+    border-radius: 15px;
+    border: solid 5px black;
+    padding-bottom: 40px;
+
+    .immagine-icona{
+      margin-top: 40px;
+      margin-left: 60px;
+      display: flex;
+      justify-content: center; 
+      align-items: center; 
+      border-radius: 50%; 
+      overflow: hidden; 
+      width: 150px; 
+      height: 150px;
+      border: 4px solid rgb(160, 160, 160);
+      
+    }
+    
+    .img-icona {
+      width: 100%; 
+      height: 100%; 
+      object-fit: cover; 
+      border-radius: 50%; 
+     
+    }
+
+    .prima-linea{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-left: 60px;
+      margin-right: 60px;
+      margin-top: 20px;
+  
+      .nome-cognome-lavoro{
+        font-family: "Bebas Neue";
+        border-left: #242424 solid 2px;
+        padding-left: 5px;
+
+        .nome-cognome{
+          font-size: 40px;
+          
+          margin-bottom: 0;
+          padding: 0;
+        }
+        
+      }
+
+      .recapiti{
+        
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 13px;
+      }
+    }
+
+
+    .seconda-linea{
+      margin-top: 40px;
+      margin-left: 60px;
+      width: 500px;
+      border-left: #242424 solid 2px;
+      padding-left: 5px;
+
+      .descrizione{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+      }
+    }
+
+   .terza-linea{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-top: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-left: #242424 solid 2px;
+    padding-left: 5px;
+   h2{
+    font-family: "Bebas Neue";
+   }
+   h3{
+    padding-bottom: 5px;
+    font-size: 16px;
+  }
+  .periodo{
+    color: #4e4e4e;
+    font-size: 16px;
+   }
+   .freelance-web-dev{
+    font-size: 18px;
+    font-weight: 800;
+   }
+   .sotto{
+    font-weight: 600;
+    font-size: 15px;
+   }
+    .btn-progetti-box{
+    .btn-progetti-cv{
+      margin: auto 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: transparent;
+  border: none;  cursor: pointer;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  border: rgb(0, 0, 0) solid 2px;
+  height: 30px;
+  border-radius: 15px;
+  width: 100px;
+  margin: 8px;
+  font-size: 15px;
+  @include transition-ease;
+  
+    }
+    .btn-progetti-cv:hover {
+      color: rgb(53, 53, 53);
+      border: 2px rgb(82, 82, 82) solid;
+      background-color: #c9c9c9;
+    }
+   }
+
+   .educazione{
+    h2, h3{
+      padding-bottom: 10px;
+    }
+    .lavoro{
+      .master-in{
+        color: #242424;
+      }
+      .full{
+       font-size: 18px;
+       font-weight: 800;
+      }
+    }
+   } 
+  }
+
+  .quarta-linea{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 60px;
+    margin-right: 60px;
+    border-left: #242424 solid 2px;
+    padding-left: 5px;
+    margin-top: 40px;
+
+   .skills{
+    font-family: "Bebas Neue";
+    font-size: 24px;
+   }
+   h3{
+    font-weight: 550;
+    font-size: 16px;
+
+    .grassetto{
+      font-weight: 700;
+    }
+   }
+  }
+ }
+}
+
+@media only screen and (max-width: 1000px){
+  .background{
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    .sezione-centrale{
+      width: 70%;
+      height: 100%;
+      box-shadow: 5px 5px 4px 5px rgb(78, 78, 78);
+      margin: 100px auto 0;
+      padding-bottom: 20px;
+      .immagine-icona{
+        margin-top: 20px;
+        margin-left: 30px;
+        width: 120px; 
+        height: 120px; 
+      }
+      .prima-linea{
+        margin-left: 10px;
+        margin-right: 60px;
+        margin-top: 20px;
+        .nome-cognome-lavoro{
+          .nome-cognome{
+            font-size: 30px;
+            margin-bottom: 0;
+            padding: 0;
+            padding-right: 20px;
+          }
+        }
+        .recapiti{
+          font-size: 10px;
+        }
+      }
+      .seconda-linea{
+        margin-left: 10px;
+        width: 80%;
+  
+        .descrizione{
+          font-size: 16px;
+        }
+      }
+  
+     .terza-linea{
+      margin-left: 10px;
+
+      .esperienze-lavorative{
+        margin-right: 20px;
+      }
+    }
+    .quarta-linea{
+      margin-left: 10px;
+      padding-bottom: 20px;   
+    }
+   }
+  }
+ 
+  .header1{
+    visibility: visible;
+  }
+  .header2{
+    visibility: hidden;
+  }
+}
+
+@media only screen and (max-width: 670px){
+ 
+  .background{
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+   
+    .sezione-centrale{
+      width: 80%;
+      height: 100%;
+      box-shadow: 5px 5px 4px 5px rgb(78, 78, 78);
+      margin: 100px auto 0;
+      padding-bottom: 20px;
+      .immagine-icona{
+        margin-top: 20px;
+        margin-left: 30px;
+        width: 80px; 
+        height: 80px; 
+      }
+      .prima-linea{
+        margin-left: 10px;
+        margin-right: 60px;
+        margin-top: 20px;
+        .nome-cognome-lavoro{
+          .nome-cognome{
+            font-size: 30px;
+            margin-bottom: 0;
+            padding: 0;
+            padding-right: 20px;
+          }
+        }
+        .recapiti{
+          font-size: 10px;
+        }
+      }
+      .seconda-linea{
+        margin-left: 10px;
+        width: 80%;
+  
+        .descrizione{
+          font-size: 16px;
+        }
+      }
+  
+     .terza-linea{
+      margin-left: 10px;
+
+      .esperienze-lavorative{
+        margin-right: 20px;
+      }
+    }
+    .quarta-linea{
+      margin-left: 10px;
+      padding-bottom: 20px;   
+    }
+   }
+  }
+ 
+  .header1{
+    visibility: hidden;
+  }
+  .header2{
+    visibility: visible;
+  }
+}
+
+.fa-brands:before{
+  padding: 20px 0;
+}
+

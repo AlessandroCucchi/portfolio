@@ -1,0 +1,512 @@
+header {
+  height: 55px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  color: white;
+  border-bottom: solid 2px #3d3d3d;
+  background-color: #181818;
+}
+
+.il-mio-nome {
+  align-items: center;
+  display: flex;
+  margin-left: 5em;
+}
+.il-mio-nome .btn-alessandro-cucchi {
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  height: 32px;
+  width: 165px;
+  border-radius: 16px;
+  transition: all 0.5s ease-in-out;
+}
+.il-mio-nome .btn-alessandro-cucchi .nome {
+  font-size: 18px;
+}
+.il-mio-nome .btn-alessandro-cucchi .cognome {
+  font-size: 16px;
+}
+
+.btn-alessandro-cucchi:hover {
+  box-shadow: 2px 2px 2px 2px rgba(255, 255, 255, 0.233);
+}
+
+.nav-btns {
+  align-items: center;
+  display: flex;
+  margin-right: 12em;
+}
+.nav-btns .nav-btn-progetti,
+.nav-btns .nav-btn-chi-sono,
+.nav-btns .nav-btn-contattami {
+  margin: auto 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  color: white;
+  height: 30px;
+  border-radius: 15px;
+  width: 100px;
+  margin: 8px;
+  font-size: 15px;
+  transition: all 0.5s ease-in-out;
+}
+.nav-btns .nav-btn-progetti:hover,
+.nav-btns .nav-btn-chi-sono:hover {
+  box-shadow: 2px 2px 2px 2px rgba(255, 255, 255, 0.233);
+}
+.nav-btns .nav-btn-contattami {
+  border: solid 1px none;
+  background-color: white;
+  color: black;
+  height: 30px;
+  border-radius: 15px;
+  width: 100px;
+}
+.nav-btns .nav-btn-contattami:hover {
+  color: white;
+  background-color: transparent;
+  border: 2px solid white;
+}
+
+.footer-contatti {
+  position: relative;
+  bottom: -1rem;
+  text-align: center;
+}
+.footer-contatti .fa-brands:before {
+  padding: 20px 20px;
+}
+.footer-contatti a {
+  padding: 0 20px;
+  color: white;
+}
+.footer-contatti a:hover {
+  color: rgb(138, 138, 138);
+}
+
+.menu-btn {
+  position: absolute;
+  z-index: 2;
+  right: 4rem;
+  top: 2rem;
+  height: 20px;
+  width: 28px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn-burger {
+  position: absolute;
+  right: 0;
+  top: 0.5rem;
+  width: 28px;
+  height: 3px;
+  background: #fff;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn-burger::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  width: 28px;
+  height: 3px;
+  background: #fff;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn-burger::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  width: 20px;
+  height: 3px;
+  background: #fff;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn-burger.open {
+  transform: rotate(720deg);
+  background: transparent;
+}
+.menu-btn-burger.open::before {
+  transform: rotate(45deg) translate(5px, 8px);
+}
+.menu-btn-burger.open::after {
+  width: 28px;
+  transform: rotate(-45deg) translate(3px, -7px);
+}
+
+.nav {
+  position: fixed;
+  top: -20px;
+  width: 100vw;
+  opacity: 0.98;
+  visibility: hidden;
+  list-style-type: none;
+  z-index: 1;
+  overflow-x: hidden;
+}
+.nav.open {
+  visibility: visible;
+}
+.nav .menu-nav {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  height: 110vh;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+  background-color: #282828;
+  transform: translateY(-100%);
+  list-style-type: none;
+  padding: 0;
+  color: rgb(80, 80, 80);
+  transition: all 0.5s ease-in-out;
+}
+.nav .menu-nav.open {
+  transform: translateY(0);
+}
+.nav .menu-nav-item {
+  color: rgb(80, 80, 80);
+  transform: translateX(100vw);
+  transition: all 0.5s ease-in-out;
+}
+.nav .menu-nav-item.open {
+  transform: translateX(0);
+}
+.nav .menu-nav-item.active > a {
+  color: rgb(172, 172, 172);
+}
+.nav .menu-nav-link {
+  display: inline-block;
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 1rem 0;
+  font-weight: 300;
+  color: rgb(80, 80, 80);
+}
+.nav .menu-nav-link :visited {
+  color: rgb(80, 80, 80);
+}
+.nav .menu-nav-link:hover {
+  color: rgb(0, 0, 0);
+}
+
+.menu-nav-item:nth-child(1) {
+  transition-delay: 0.25s;
+}
+
+.menu-nav-item:nth-child(2) {
+  transition-delay: 0.35s;
+}
+
+.menu-nav-item:nth-child(3) {
+  transition-delay: 0.45s;
+}
+
+.menu-nav-item:nth-child(4) {
+  transition-delay: 0.55s;
+}
+
+.icona-icona {
+  position: absolute;
+  z-index: 0;
+  left: 1rem;
+  top: 0.5rem;
+  height: 80px;
+  width: 80px;
+  cursor: pointer;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-image: linear-gradient(270deg, #242424, #292929);
+}
+
+.background {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+.background .sezione-centrale {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 70%;
+  height: 100%;
+  background-color: white;
+  box-shadow: 10px 10px 4px 5px rgb(78, 78, 78);
+  margin: 100px auto 0;
+  border-radius: 15px;
+  border: solid 5px black;
+  padding-bottom: 40px;
+}
+.background .sezione-centrale .immagine-icona {
+  margin-top: 40px;
+  margin-left: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+  border: 4px solid rgb(160, 160, 160);
+}
+.background .sezione-centrale .img-icona {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+.background .sezione-centrale .prima-linea {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-top: 20px;
+}
+.background .sezione-centrale .prima-linea .nome-cognome-lavoro {
+  font-family: "Bebas Neue";
+  border-left: #242424 solid 2px;
+  padding-left: 5px;
+}
+.background .sezione-centrale .prima-linea .nome-cognome-lavoro .nome-cognome {
+  font-size: 40px;
+  margin-bottom: 0;
+  padding: 0;
+}
+.background .sezione-centrale .prima-linea .recapiti {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+}
+.background .sezione-centrale .seconda-linea {
+  margin-top: 40px;
+  margin-left: 60px;
+  width: 500px;
+  border-left: #242424 solid 2px;
+  padding-left: 5px;
+}
+.background .sezione-centrale .seconda-linea .descrizione {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+.background .sezione-centrale .terza-linea {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-top: 60px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-left: #242424 solid 2px;
+  padding-left: 5px;
+}
+.background .sezione-centrale .terza-linea h2 {
+  font-family: "Bebas Neue";
+}
+.background .sezione-centrale .terza-linea h3 {
+  padding-bottom: 5px;
+  font-size: 16px;
+}
+.background .sezione-centrale .terza-linea .periodo {
+  color: #4e4e4e;
+  font-size: 16px;
+}
+.background .sezione-centrale .terza-linea .freelance-web-dev {
+  font-size: 18px;
+  font-weight: 800;
+}
+.background .sezione-centrale .terza-linea .sotto {
+  font-weight: 600;
+  font-size: 15px;
+}
+.background .sezione-centrale .terza-linea .btn-progetti-box .btn-progetti-cv {
+  margin: auto 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  border: rgb(0, 0, 0) solid 2px;
+  height: 30px;
+  border-radius: 15px;
+  width: 100px;
+  margin: 8px;
+  font-size: 15px;
+  transition: all 0.5s ease-in-out;
+}
+.background .sezione-centrale .terza-linea .btn-progetti-box .btn-progetti-cv:hover {
+  color: rgb(53, 53, 53);
+  border: 2px rgb(82, 82, 82) solid;
+  background-color: #c9c9c9;
+}
+.background .sezione-centrale .terza-linea .educazione h2, .background .sezione-centrale .terza-linea .educazione h3 {
+  padding-bottom: 10px;
+}
+.background .sezione-centrale .terza-linea .educazione .lavoro .master-in {
+  color: #242424;
+}
+.background .sezione-centrale .terza-linea .educazione .lavoro .full {
+  font-size: 18px;
+  font-weight: 800;
+}
+.background .sezione-centrale .quarta-linea {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 60px;
+  margin-right: 60px;
+  border-left: #242424 solid 2px;
+  padding-left: 5px;
+  margin-top: 40px;
+}
+.background .sezione-centrale .quarta-linea .skills {
+  font-family: "Bebas Neue";
+  font-size: 24px;
+}
+.background .sezione-centrale .quarta-linea h3 {
+  font-weight: 550;
+  font-size: 16px;
+}
+.background .sezione-centrale .quarta-linea h3 .grassetto {
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 1000px) {
+  .background {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  .background .sezione-centrale {
+    width: 70%;
+    height: 100%;
+    box-shadow: 5px 5px 4px 5px rgb(78, 78, 78);
+    margin: 100px auto 0;
+    padding-bottom: 20px;
+  }
+  .background .sezione-centrale .immagine-icona {
+    margin-top: 20px;
+    margin-left: 30px;
+    width: 120px;
+    height: 120px;
+  }
+  .background .sezione-centrale .prima-linea {
+    margin-left: 10px;
+    margin-right: 60px;
+    margin-top: 20px;
+  }
+  .background .sezione-centrale .prima-linea .nome-cognome-lavoro .nome-cognome {
+    font-size: 30px;
+    margin-bottom: 0;
+    padding: 0;
+    padding-right: 20px;
+  }
+  .background .sezione-centrale .prima-linea .recapiti {
+    font-size: 10px;
+  }
+  .background .sezione-centrale .seconda-linea {
+    margin-left: 10px;
+    width: 80%;
+  }
+  .background .sezione-centrale .seconda-linea .descrizione {
+    font-size: 16px;
+  }
+  .background .sezione-centrale .terza-linea {
+    margin-left: 10px;
+  }
+  .background .sezione-centrale .terza-linea .esperienze-lavorative {
+    margin-right: 20px;
+  }
+  .background .sezione-centrale .quarta-linea {
+    margin-left: 10px;
+    padding-bottom: 20px;
+  }
+  .header1 {
+    visibility: visible;
+  }
+  .header2 {
+    visibility: hidden;
+  }
+}
+@media only screen and (max-width: 670px) {
+  .background {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  .background .sezione-centrale {
+    width: 80%;
+    height: 100%;
+    box-shadow: 5px 5px 4px 5px rgb(78, 78, 78);
+    margin: 100px auto 0;
+    padding-bottom: 20px;
+  }
+  .background .sezione-centrale .immagine-icona {
+    margin-top: 20px;
+    margin-left: 30px;
+    width: 80px;
+    height: 80px;
+  }
+  .background .sezione-centrale .prima-linea {
+    margin-left: 10px;
+    margin-right: 60px;
+    margin-top: 20px;
+  }
+  .background .sezione-centrale .prima-linea .nome-cognome-lavoro .nome-cognome {
+    font-size: 30px;
+    margin-bottom: 0;
+    padding: 0;
+    padding-right: 20px;
+  }
+  .background .sezione-centrale .prima-linea .recapiti {
+    font-size: 10px;
+  }
+  .background .sezione-centrale .seconda-linea {
+    margin-left: 10px;
+    width: 80%;
+  }
+  .background .sezione-centrale .seconda-linea .descrizione {
+    font-size: 16px;
+  }
+  .background .sezione-centrale .terza-linea {
+    margin-left: 10px;
+  }
+  .background .sezione-centrale .terza-linea .esperienze-lavorative {
+    margin-right: 20px;
+  }
+  .background .sezione-centrale .quarta-linea {
+    margin-left: 10px;
+    padding-bottom: 20px;
+  }
+  .header1 {
+    visibility: hidden;
+  }
+  .header2 {
+    visibility: visible;
+  }
+}
+.fa-brands:before {
+  padding: 20px 0;
+}/*# sourceMappingURL=chi-sono.css.map */

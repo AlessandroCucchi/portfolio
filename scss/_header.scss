@@ -1,0 +1,86 @@
+header{
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    color: white;
+    border-bottom: solid 2px #3d3d3d;
+    background-color: #181818;
+  }
+
+.il-mio-nome{
+  align-items: center;
+  display: flex;
+  margin-left: 5em;
+
+  .btn-alessandro-cucchi{
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    height: 32px;
+    width: 165px;
+    border-radius: 16px;
+    @include transition-ease;
+
+    .nome{
+      font-size: 18px;
+    }
+    .cognome{
+      font-size: 16px;
+    }
+  }
+}
+.btn-alessandro-cucchi:hover{
+  box-shadow: 2px 2px 2px 2px rgba(255, 255, 255, 0.233);
+}
+
+
+.nav-btns{
+  
+  align-items: center;
+  display: flex;
+  margin-right: 12em;
+
+  .nav-btn-progetti,
+  .nav-btn-chi-sono,
+  .nav-btn-contattami{
+  margin: auto 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  color: white;
+  height: 30px;
+  border-radius: 15px;
+  width: 100px;
+  margin: 8px;
+  font-size: 15px;
+  @include transition-ease;
+  }
+
+  .nav-btn-progetti:hover,
+  .nav-btn-chi-sono:hover{
+    box-shadow: 2px 2px 2px 2px rgba(255, 255, 255, 0.233);
+  }
+  .nav-btn-contattami{
+    border: solid 1px none;
+    background-color: white;
+    color: black;
+    height: 30px;
+    border-radius: 15px;
+    width: 100px;
+   }
+   .nav-btn-contattami:hover{
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+  }
+}
+

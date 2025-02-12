@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contattami</title>
+  <link rel="stylesheet" href="scss/contattami.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cardo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/a2dd828b2e.js" crossorigin="anonymous"></script>
+<link rel="icon" href="assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="icon" href="assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="assets/img/favicons/favicon.ico" sizes="64x64" type="ico">
+</head>
+<body>
+  <header class="header1">
+
+    <div class="il-mio-nome">
+     <a href="index.html"><button class="btn-alessandro-cucchi">
+      <span class="nome">Alessandro</span>
+    <span class="cognome">Cucchi</span></button>
+  </a>   
+  </div>
+
+
+    <div class="nav-btns">
+      <a href="chi-sono.html">
+        <button class="nav-btn-chi-sono">Chi Sono</button>
+      </a>
+      <a href="contattami.html"> 
+        <button class="nav-btn-contattami">Contattami</button>
+      </a>
+    </div>
+   </header>
+
+
+   <section class="header2">
+    <div class="menu-btn">
+      <span class="menu-btn-burger"></span>
+    </div>
+    <nav class="nav">
+      <ul class="menu-nav">
+        <li class="menu-nav-item">
+          <a href="index.html" class="menu-nav-link">Home</a>
+        </li>
+        <li class="menu-nav-item">
+          <a href="chi-sono.html" class="menu-nav-link">Chi Sono</a>
+        </li>
+        <li class="menu-nav-item active">
+          <a href="contattami.html" class="menu-nav-link">Contattami</a>
+        </li> 
+      </ul>
+    </nav>
+  </section>
+<main>
+
+  <div class="contact-container">
+    <form class="contact-left" action="https://api.web3forms.com/submit" method="POST">
+      <div class="contact-left-title">
+        <h2><span class="get-it">Get in</span>
+          <span class="touch">touch</span></h2>
+        <hr>
+      </div>
+      <input type="hidden" name="access_key" value="156895c8-8d7d-489e-a497-30f973d7fa01">
+      <input type="text" name="name" placeholder="Your Name"
+      class="contact-inputs" required>
+      <input type="email" name="email" placeholder="Your Email"
+      class="contact-inputs" required>
+      <textarea name="message" placeholder="Your Message"
+      class="contact-inputs" required></textarea>
+      <button type="submit">Submit
+      </button>
+    </form>
+  </div>
+
+</main>
+ 
+<footer>
+  <div class="footer-contatti">
+    <a href="mailto:a.cucchi208@gmail.com" target="_blank">
+    <i class="fa-solid fa-envelope fa-3x"></i>
+  </a>
+  <a href="https://github.com/AlessandroCucchi" target="_blank">
+    <i class="fa-brands fa-github fa-3x"></i>
+  </a>
+</div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
